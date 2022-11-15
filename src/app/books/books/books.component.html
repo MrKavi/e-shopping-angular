@@ -1,0 +1,6 @@
+<div class="flex flex-wrap">
+  <div *ngFor="let book of books">
+    <!-- (BookEmitter)="addToCard($event)" -->
+    <app-book [book]="book"></app-book>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="flex flex-wrap mx-auto">
+  <div
+    class="w-max mx-1 shadow-white max-w-xs bg-black ring-1 ring-white text-white rounded-md shadow-md dark:bg-gray-800 dark:border-gray-700"
+  >
+    <a href="#">
+      <img
+        class="p-4 h-52 mx-auto rounded-t-lg"
+        src="{{ book.imageUrl }}"
+        alt="product image"
+      />
+    </a>
+    <div class="px-5 pb-5">
+      <a href="#">
+        <h5 class="text-xl font-semibold tracking-tight text-white">
+          {{ book.name }}
+        </h5>
+      </a>
+      <div class="flex items-center mt-2.5 mb-5">
+        <app-star></app-star>
+        <app-star></app-star>
+        <app-star></app-star>
+        <app-star></app-star>
+        <app-star></app-star>
+      </div>
+      <div class="flex justify-between space-x-1 items-center">
+        <span class="text-md font-bold text-white">{{
+          book.price | currency: "INR"
+        }}</span>
+        <button
+          *ngIf="!isInCart"
+          (click)="addToCart()"
+          class="text-black hover:text-white bg-yellow-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Add to Cart
+        </button>
+        <button
+          *ngIf="isInCart"
+          (click)="removeFromCart()"
+          class="text-black hover:text-white bg-yellow-400 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-1 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Remove From Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
