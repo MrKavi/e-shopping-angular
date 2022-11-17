@@ -1,0 +1,23 @@
+<div class="flex-col shadow-md px-6 py-4">
+  <h1 class="text-3xl font-bold">Child Component</h1>
+  <div class="flex-col space-y-4 mt-3">
+    <!-- <p>Name : {{ nameData }}</p>
+    <p>Mark : {{ markData }}</p> -->
+    <p>Name : {{ objData.name }}</p>
+    <p>Mark : {{ objData.mark }}</p>
+  </div>
+</div>
+<div class="flex items-center mt-10 justify-center">
+  <table class="w-[100%] p-2 shadow-md">
+    <thead class="px-2 py-2">
+      <th class="bg-slate-100 ring-1">Name</th>
+      <th class="bg-slate-200 ring-1">Price</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of NameList">
+        <td class="px-2 py-2 bg-slate-100 ring-1">{{ list.name }}</td>
+        <td class="px-2 py-2 bg-slate-200 ring-1">{{ list.mark }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

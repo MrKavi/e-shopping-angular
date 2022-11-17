@@ -1,25 +1,102 @@
-<section class="h-screen w-full bg-signup">
-  <div class="container px-6 py-12 h-full">
+<section class="h-screen bg-signup">
+  <div class="px-6 h-full text-gray-800">
     <div
-      class="flex justify-center items-center flex-wrap h-full g-6 text-gray-800"
+      class="flex xl:justify-center lg:justify-between justify-center items-center flex-wrap h-full g-6"
     >
-      <div class="md:w-8/12 lg:w-6/12 mb-12 md:mb-0">
+      <div
+        class="grow-0 shrink-1 md:shrink-0 basis-auto xl:w-6/12 lg:w-6/12 md:w-9/12 mb-12 md:mb-0"
+      >
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
           class="w-full"
-          alt="Phone image"
+          alt="Sample image"
         />
       </div>
-      <div class="md:w-8/12 lg:w-5/12 lg:ml-20">
-        <h1 class="text-black font-extrabold text-xl">SIGN-UP</h1>
-        <form (ngSubmit)="submit()">
+      <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
+        <form>
+          <a class="p-10" href="">
+            <img
+              class="w-10"
+              src="data:image/png;base64,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"
+            />
+          </a>
+          <div
+            class="flex flex-row items-center justify-center lg:justify-start"
+          >
+            <p class="text-lg text-white mb-0 mr-4">Sign up with</p>
+            <button
+              type="button"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              class="inline-block p-3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+            >
+              <!-- Facebook -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+                class="w-4 h-4"
+              >
+                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  fill="currentColor"
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              class="inline-block p-3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+            >
+              <!-- Twitter -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                class="w-4 h-4"
+              >
+                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  fill="currentColor"
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              data-mdb-ripple="true"
+              data-mdb-ripple-color="light"
+              class="inline-block p-3 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+            >
+              <!-- Linkedin -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                class="w-4 h-4"
+              >
+                <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  fill="currentColor"
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
+          >
+            <p class="text-center font-semibold mx-4 mb-0">Or</p>
+          </div>
+
           <!-- Email input -->
           <div class="mb-6">
             <input
-              [(ngModel)]="form.email"
-              name="email"
-              type="email"
+              type="text"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput2"
               placeholder="Email address"
             />
           </div>
@@ -27,19 +104,18 @@
           <!-- Password input -->
           <div class="mb-6">
             <input
-              [(ngModel)]="form.password"
-              name="password"
               type="password"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput2"
               placeholder="Password"
             />
           </div>
+          <!--confirm Password input -->
           <div class="mb-6">
             <input
-              [(ngModel)]="form.password"
-              name="password"
               type="password"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+              id="exampleFormControlInput2"
               placeholder="Confirm Password"
             />
           </div>
@@ -49,75 +125,32 @@
               <input
                 type="checkbox"
                 class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer"
-                id="exampleCheck3"
-                checked
+                id="exampleCheck2"
               />
               <label
-                class="form-check-label inline-block text-gray-800"
+                class="form-check-label inline-block text-yellow-300"
                 for="exampleCheck2"
                 >Remember me</label
               >
             </div>
           </div>
 
-          <!-- Submit button -->
-          <button
-            type="submit"
-            class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-          >
-            Sign Up
-          </button>
-
-          <div
-            class="flex items-center my-4 before:flex-1 before:border-t before:border-gray-300 before:mt-0.5 after:flex-1 after:border-t after:border-gray-300 after:mt-0.5"
-          >
-            <p class="text-center font-semibold mx-4 mb-0">OR</p>
+          <div class="text-center lg:text-left">
+            <button
+              type="button"
+              class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+            >
+              Sign-Up
+            </button>
+            <p class="text-sm text-white font-semibold mt-2 pt-1 mb-0">
+              Already have an account?
+              <a
+                href="/sign-in"
+                class="text-yellow-400 hover:text-yellow-700 focus:text-red-700 transition duration-200 ease-in-out"
+                >Sign in</a
+              >
+            </p>
           </div>
-
-          <a
-            class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
-            style="background-color: #3b5998"
-            href="#!"
-            role="button"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-          >
-            <!-- Facebook -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 320 512"
-              class="w-3.5 h-3.5 mr-2"
-            >
-              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-              /></svg
-            >Continue with Facebook
-          </a>
-          <a
-            class="px-7 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
-            style="background-color: #55acee"
-            href="#!"
-            role="button"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-          >
-            <!-- Twitter -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              class="w-3.5 h-3.5 mr-2"
-            >
-              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-              <path
-                fill="currentColor"
-                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-              /></svg
-            >Continue with Twitter
-          </a>
         </form>
       </div>
     </div>
